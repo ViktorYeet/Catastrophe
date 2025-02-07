@@ -1,4 +1,4 @@
-# developement
+# Development
 clone the repo
 ```
 git clone 

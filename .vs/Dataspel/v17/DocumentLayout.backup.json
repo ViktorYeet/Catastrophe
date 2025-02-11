@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\hanss\\School\\Dataspel\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3A0B5390-4F85-033B-7073-1615CCEF0002}|Assembly-CSharp.csproj|c:\\users\\hanss\\school\\dataspel\\assets\\scenes\\brick project studio\\_bps basic assets\\common\\scripts and animations\\first person player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A0B5390-4F85-033B-7073-1615CCEF0002}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\brick project studio\\_bps basic assets\\common\\scripts and animations\\first person player\\playermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerMovement.cs",
+              "DocumentMoniker": "C:\\Users\\hanss\\School\\Dataspel\\Assets\\Scenes\\Brick Project Studio\\_BPS Basic Assets\\Common\\Scripts and Animations\\First Person Player\\PlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\Brick Project Studio\\_BPS Basic Assets\\Common\\Scripts and Animations\\First Person Player\\PlayerMovement.cs",
+              "ToolTip": "C:\\Users\\hanss\\School\\Dataspel\\Assets\\Scenes\\Brick Project Studio\\_BPS Basic Assets\\Common\\Scripts and Animations\\First Person Player\\PlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scenes\\Brick Project Studio\\_BPS Basic Assets\\Common\\Scripts and Animations\\First Person Player\\PlayerMovement.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAawCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T12:49:12.768Z",
+              "EditorCaption": ""
             }
           ]
         }

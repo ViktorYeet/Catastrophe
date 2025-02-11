@@ -11,7 +11,7 @@ namespace SojaExiles
         public CharacterController controller;
 
         public float speed = 5f;
-        public float gravity = -15f;
+        public float gravity = -1000;
         public float jumpHeight = 2f;
 
         Vector3 velocity;
@@ -34,9 +34,9 @@ namespace SojaExiles
             if (Input.GetButtonDown("Jump"))
             {
                 // Calculate the upward velocity required to reach the jump height
-                velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                velocity.y = Mathf.Sqrt(jumpHeight * -5f * gravity);
             }
-            velocity.y += gravity * Time.deltaTime;
+            velocity.y += gravity * 5f * Time.deltaTime;
 
             controller.Move(velocity * Time.deltaTime);
 

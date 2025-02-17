@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    [SerializeField] DoorBehavior doorBehavior;
+    [SerializeField] InventoryManager.AvailableItems itemType;
     void OnTriggerEnter(Collider collider) {
         if(collider.gameObject.CompareTag("Player")) {
-            doorBehavior.open();
-            Destroy(gameObject);
+            InventoryManager.Instance.addItem(itemType);
         }
     }
 }

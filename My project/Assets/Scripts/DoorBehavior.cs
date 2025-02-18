@@ -1,21 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using SojaExiles;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class DoorBehavior : opencloseDoor
+public class DoorBehavior : MonoBehaviour
 {
     // Start is called before the first frame update
-    public bool locked; 
-    [SerializeField] InventoryManager.AvailableItems requiredItem;
-    protected void OnMouseOver() {
-        if(!locked || InventoryManager.Instance._inventoryItems.Contains(requiredItem)) {
-            base.OnMouseOver();
-        }
-        else {
-            print("the door is locked");
-            print(InventoryManager.Instance._inventoryItems);
-        }
+    public void open() {
+        Destroy(gameObject);
     }
 }

@@ -8,7 +8,6 @@ public class Key : MonoBehaviour
     void OnTriggerEnter(Collider collider) {
         if(collider.gameObject.CompareTag("Player")) {
             InventoryManager.Instance.addItem(itemType);
-            Destroy(gameObject);
         }
     }
 }

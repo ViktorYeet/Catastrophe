@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PushObj : MonoBehaviour
 {
-
-    private float pushPower = 4;
+    //Change this to be a formula using the speed the player has
+    private float pushPower = 1;
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Rigidbody body = hit.collider.attachedRigidbody;
@@ -19,24 +19,11 @@ public class PushObj : MonoBehaviour
         {
             return;
         }
+
+        //Logic for when collision happens
         Vector3 pushDir = new Vector3(hit.moveDirection.x, 0, hit.moveDirection.z);
-        //
+        //Pushes the object based on the point of collision. Remove to only push in x,y,z
         Vector3 collisionPoint = hit.point;
         body.AddForceAtPosition(pushDir * pushPower, collisionPoint, ForceMode.Impulse);
-    }
-
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

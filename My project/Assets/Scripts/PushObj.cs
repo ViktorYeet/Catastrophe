@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PushObj : MonoBehaviour
 {
+    //Object beign pushed need to have a rigidbody or it wont do anything!
+
     //Change this to be a formula using the speed the player has
     private float pushPower = 1;
     private void OnControllerColliderHit(ControllerColliderHit hit)

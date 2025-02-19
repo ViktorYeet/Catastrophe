@@ -13,9 +13,8 @@ public class DoorBehavior : opencloseDoor
         if(!locked || InventoryManager.Instance._inventoryItems.Contains(requiredItem)) {
             base.OnMouseOver();
         }
-        else {
+        else if (Input.GetMouseButtonDown(0)){
             print("the door is locked");
-            print(InventoryManager.Instance._inventoryItems);
         }
     }
 }

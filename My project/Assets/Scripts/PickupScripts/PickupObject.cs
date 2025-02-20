@@ -16,7 +16,8 @@ public class PickupObject : MonoBehaviour
             if (Physics.Raycast(PlayerCameraTransform.position, PlayerCameraTransform.forward, out RaycastHit raycasthit, pickupdistance)) // ? Added missing parenthesis
             {
                 Debug.Log(raycasthit.transform);
-                if (raycasthit.transform.TryGetComponent(out ObjectGrabbable objectGrabbable)) // ? Fixed incorrect 'out' syntax
+                if (raycasthit.transform.TryGetComponent(out ObjectGrabbable objectGrabbable))
+                    objectGrabbable.Grab(objectGrabPointTransform);
                 {
                     Debug.Log(objectGrabbable);
                 }

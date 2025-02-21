@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PickupObject : MonoBehaviour
@@ -7,6 +8,7 @@ public class PickupObject : MonoBehaviour
     [SerializeField] private Transform PlayerCameraTransform;
     [SerializeField] private Transform objectGrabPointTransform;
     [SerializeField] private LayerMask pickUpLayerMask;
+    private ObjectGrabbable objectGrabbable;
 
 
     // updates constantly
@@ -15,19 +17,25 @@ public class PickupObject : MonoBehaviour
         //Detects if E is pressed down
         if (Input.GetKeyDown(KeyCode.E))
         {
-            //Checks if player is in range of pickup
-            float pickupdistance = 2f;
-            if (Physics.Raycast(PlayerCameraTransform.position, PlayerCameraTransform.forward, out RaycastHit raycasthit, pickupdistance)) 
-            {
-                Debug.Log(raycasthit.transform);
-                //If object has the ObjectGrabbable script grab it, and turn of collision and gravity
-                if (raycasthit.transform.TryGetComponent(out ObjectGrabbable objectGrabbable))
-                    objectGrabbable.GetComponent<CapsuleCollider>().enabled = false;
-                    objectGrabbable.GetComponent<Rigidbody>().useGravity = false;
-                    objectGrabbable.Grab(objectGrabPointTransform);
+            if (objectGrabbable == null){
+
+
+                //Checks if player is in range of pickup
+                float pickupdistance = 2f;
+                if (Physics.Raycast(PlayerCameraTransform.position, PlayerCameraTransform.forward, out RaycastHit raycasthit, pickupdistance))
                 {
-                    Debug.Log(objectGrabbable);
+                    Debug.Log(raycasthit.transform);
+                    //If object has the ObjectGrabbable script grab it, and turn of collision and gravity
+                    if (raycasthit.transform.TryGetComponent(out objectGrabbable))
+                    {
+                        objectGrabbable.Grab(objectGrabPointTransform);
+                    }
                 }
+            }
+            else{ 
+                //Drop item if something is carried
+                objectGrabbable.Drop();
+                objectGrabbable = null;
             }
         }
     }

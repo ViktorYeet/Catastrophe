@@ -13,10 +13,12 @@ public class PickupObject : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             float pickupdistance = 2f;
-            if (Physics.Raycast(PlayerCameraTransform.position, PlayerCameraTransform.forward, out RaycastHit raycasthit, pickupdistance)) // ? Added missing parenthesis
+            if (Physics.Raycast(PlayerCameraTransform.position, PlayerCameraTransform.forward, out RaycastHit raycasthit, pickupdistance)) 
             {
                 Debug.Log(raycasthit.transform);
                 if (raycasthit.transform.TryGetComponent(out ObjectGrabbable objectGrabbable))
+                    objectGrabbable.GetComponent<CapsuleCollider>().enabled = false;
+                    objectGrabbable.GetComponent<Rigidbody>().useGravity = false;
                     objectGrabbable.Grab(objectGrabPointTransform);
                 {
                     Debug.Log(objectGrabbable);

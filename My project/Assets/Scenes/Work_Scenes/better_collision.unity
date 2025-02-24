@@ -653,7 +653,7 @@ Transform:
   m_GameObject: {fileID: 796383633}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1262,7 +1262,7 @@ MonoBehaviour:
   slideDuration: 2.2
   gravity: -9.81
   jumpHeight: 2.5
-  groundCheckY: 0.3
+  groundCheckY: 0.2
   ceilingCheckY: 0.3
   sphereCastRadius: 0.25
   sphereCastDistance: 0.75
@@ -1299,7 +1299,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 0.3
+  m_Height: 0.15
   m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -1315,7 +1315,7 @@ Transform:
   m_GameObject: {fileID: 1504317188}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.9999999, z: -0, w: -0.00051557715}
-  m_LocalPosition: {x: 14.159894, y: 0.41, z: -4.5399995}
+  m_LocalPosition: {x: 14.159894, y: 0.5, z: -4.5399995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

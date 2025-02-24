@@ -16,7 +16,7 @@ public class PickupObject : MonoBehaviour
     private void Update()
     {
         //Detects if E is pressed down
-        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (objectGrabbable == null){
 

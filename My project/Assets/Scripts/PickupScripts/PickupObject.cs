@@ -9,7 +9,7 @@ public class PickupObject : MonoBehaviour
     [SerializeField] private Transform objectGrabPointTransform;
     [SerializeField] private LayerMask pickUpLayerMask;
     private ObjectGrabbable objectGrabbable;
-
+    private float throwPower = 5f;
 
 
     // updates constantly
@@ -33,9 +33,10 @@ public class PickupObject : MonoBehaviour
                     }
                 }
             }
-            else if(Input.GetKeyDown(KeyCode.Mouse0)) { 
+            else if(Input.GetKeyDown(KeyCode.Mouse0)) {
                 //Throw item if something is carried
-                objectGrabbable.Drop();
+                Vector3 throwDirection = PlayerCameraTransform.forward;
+                objectGrabbable.Throw(throwDirection, throwPower);
                 objectGrabbable = null;
             }
             else

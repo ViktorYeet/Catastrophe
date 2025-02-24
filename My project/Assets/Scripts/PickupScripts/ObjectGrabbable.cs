@@ -23,9 +23,20 @@ public class ObjectGrabbable : MonoBehaviour
     //Drops item
     public void Drop()
     {
+        //Drops object and turns on collision and gravity
         this.objectGrabPointTransform = null;
         this.GetComponent<Rigidbody>().useGravity = true;
-        this.GetComponent<CapsuleCollider>().enabled = true;
+        this.GetComponent<Collider>().enabled = true;
+        objectRigidbody.velocity = Vector3.zero;
+    }
+
+    public void Throw(Vector3 throwDirection, float throwForce)
+    {
+        //Throws object and turns on collision and gravity
+        this.objectGrabPointTransform = null;
+        this.GetComponent<Rigidbody>().useGravity = true;
+        this.GetComponent<Collider>().enabled = true;
+        objectRigidbody.velocity = throwDirection.normalized * throwForce;
     }
 
     //Makes it so it moves with the GrabPointTransform

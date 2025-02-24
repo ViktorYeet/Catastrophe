@@ -27,6 +27,7 @@ public class ObjectGrabbable : MonoBehaviour
         this.objectGrabPointTransform = null;
         this.GetComponent<Rigidbody>().useGravity = true;
         this.GetComponent<Collider>().enabled = true;
+        objectRigidbody.velocity = Vector3.zero;
     }
 
     public void Throw(Vector3 throwDirection, float throwForce)

@@ -7,6 +7,7 @@ public class ObjectGrabbable : MonoBehaviour
 {
     private Rigidbody objectRigidbody;
     private Transform objectGrabPointTransform;
+    private float throwPower = 1;
 
     // Makes it so it only works for Rigidbody
     private void Awake()
@@ -22,6 +23,14 @@ public class ObjectGrabbable : MonoBehaviour
     }
     //Drops item
     public void Drop()
+    {
+        //Drops object and turns on collision and gravity
+        this.objectGrabPointTransform = null;
+        this.GetComponent<Rigidbody>().useGravity = true;
+        this.GetComponent<CapsuleCollider>().enabled = true;
+    }
+
+    public void Throw()
     {
         this.objectGrabPointTransform = null;
         this.GetComponent<Rigidbody>().useGravity = true;

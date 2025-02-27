@@ -952,6 +952,9 @@ MonoBehaviour:
   pickUpLayerMask:
     serializedVersion: 2
     m_Bits: 0
+  pickupKey: 0
+  dropKey: 0
+  throwKey: 0
 --- !u!4 &1563372026 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -5995965498207568499, guid: ea66ff87bac8337418790306636ac604, type: 3}

@@ -6,9 +6,10 @@ using UnityEngine;
 public class EventTrigger : MonoBehaviour
 {
     // This is a skeleton that can be used for whatever we would like in the future!
+    public GameObject triggeringObject;
     void OnTriggerEnter(Collider Other)
     {
-        if(Other.tag == "Player")
+        if(Other.tag == triggeringObject.tag)
         {
             Debug.Log("Object Entered the trigger");
         }
@@ -21,7 +22,7 @@ public class EventTrigger : MonoBehaviour
     */
     private void OnTriggerExit(Collider Other)
     {
-        if (Other.tag == "Player")
+        if (Other.tag == triggeringObject.tag)
         {
             Debug.Log("Object Exited the trigger");
         }

@@ -18,14 +18,14 @@ public class ButtonHandler : MonoBehaviour
     void StartGame()
     {
         Debug.Log("Start Game clicked!");
-        SceneManager.LoadScene("Assets/Scenes/Main_Scenes/Apartment_Scenes/Apartment.unity"); // Byt ut med din spelscen
-        //AsyncOperation asyncOperation = SceneManager.LoadSceneAsync("Assets/Scenes/Main_Scenes/OutDoors/Outdoors.unity", SceneManager.Additive);
+        SceneManager.LoadScene("Assets/Scenes/Main_Scenes/OutDoors/Outdoors.unity"); // Byt ut med din spelscen
+        SceneManager.LoadSceneAsync("Assets/Scenes/Main_Scenes/Apartment_Scenes/Apartment.unity", LoadSceneMode.Additive);
     }
 
     void OpenOptions()
     {
         Debug.Log("Options clicked!");
-        // Lägg till kod för att öppna alternativmenyn
+        // Lï¿½gg till kod fï¿½r att ï¿½ppna alternativmenyn
     }
 
     void QuitGame()

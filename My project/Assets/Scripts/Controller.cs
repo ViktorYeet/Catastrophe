@@ -31,6 +31,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 #if UNITY_EDITOR // only required if using the Menu Item function at the end of this script
 using UnityEditor;
@@ -145,6 +147,7 @@ public class Controller : MonoBehaviour
     private float ceilingOffsetY = 0;                // calculated offset relative to height
     [Space(5)]
     public bool cursorActive = false;                // cursor state
+    private Vector3 midAirVelocity = Vector3.zero;
 
 
     void Start()
@@ -346,6 +349,7 @@ public class Controller : MonoBehaviour
 
         if (isGrounded)
         {
+            
             if (isSlipping) // slip down slope
             {
                 // movement left/right while slipping down
@@ -379,7 +383,15 @@ public class Controller : MonoBehaviour
             // - Jump -
             if (!isSliding && !isCeiling && inputKeyDownJump) // jump
             {
-                fauxGravity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                //fauxGravity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+
+                fauxGravity.y = Mathf.Sqrt(Camera.main.transform.forward.y) * jumpHeight * gravity * -0.3f;
+
+                midAirVelocity = Camera.main.transform.forward * 5f;
+
+            }
+            else{
+                midAirVelocity = Vector3.zero;
             }
 
             // --
@@ -392,6 +404,7 @@ public class Controller : MonoBehaviour
         else // no friction, speed changes slower
         {
             speed = Mathf.Lerp(lastSpeed, nextSpeed, 0.125f * Time.deltaTime);
+            Console.WriteLine("jag är i luften");
         }
 
         // prevent floating if jumping into a ceiling
@@ -415,6 +428,8 @@ public class Controller : MonoBehaviour
 
         calc = move * speed * Time.deltaTime;
         calc += fauxGravity * Time.deltaTime;
+        calc.x += midAirVelocity.x * Time.deltaTime;
+        calc.z += midAirVelocity.z * Time.deltaTime;
 
         controller.Move(calc);
 

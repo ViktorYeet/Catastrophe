@@ -385,9 +385,10 @@ public class Controller : MonoBehaviour
             {
                 //fauxGravity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 
-                fauxGravity.y = Mathf.Sqrt(Camera.main.transform.forward.y) * jumpHeight * gravity * -0.3f;
+                fauxGravity.y = Mathf.Sqrt(Math.Max(Camera.main.transform.forward.y, 0f)) * jumpHeight * gravity * -0.1f + jumpHeight;
+                Debug.Log(fauxGravity.y.ToString());
 
-                midAirVelocity = Camera.main.transform.forward * 5f;
+                midAirVelocity = Camera.main.transform.forward * 3f;
 
             }
             else{
@@ -404,7 +405,6 @@ public class Controller : MonoBehaviour
         else // no friction, speed changes slower
         {
             speed = Mathf.Lerp(lastSpeed, nextSpeed, 0.125f * Time.deltaTime);
-            Console.WriteLine("jag är i luften");
         }
 
         // prevent floating if jumping into a ceiling
@@ -425,8 +425,14 @@ public class Controller : MonoBehaviour
         fauxGravity.y += gravity * Time.deltaTime;
 
         // - Move -
+        calc = Vector3.zero;
 
-        calc = move * speed * Time.deltaTime;
+        if (isGrounded){
+            calc = move * speed * Time.deltaTime * 0.5f;
+        } else{
+            midAirVelocity += move * Time.deltaTime * 3f;
+        }
+
         calc += fauxGravity * Time.deltaTime;
         calc.x += midAirVelocity.x * Time.deltaTime;
         calc.z += midAirVelocity.z * Time.deltaTime;

@@ -18,7 +18,7 @@ public class ObjectGrabbable : MonoBehaviour
     {
         this.objectGrabPointTransform = objectGrabPointTransform;
         this.GetComponent<Rigidbody>().useGravity = false;
-        this.GetComponent<CapsuleCollider>().enabled = false;
+        this.GetComponent<Collider>().enabled = false;
     }
     //Drops item
     public void Drop()

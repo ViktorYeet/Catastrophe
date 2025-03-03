@@ -31,6 +31,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 #if UNITY_EDITOR // only required if using the Menu Item function at the end of this script
 using UnityEditor;
@@ -145,6 +147,7 @@ public class Controller : MonoBehaviour
     private float ceilingOffsetY = 0;                // calculated offset relative to height
     [Space(5)]
     public bool cursorActive = false;                // cursor state
+    private Vector3 midAirVelocity = Vector3.zero;
 
 
     void Start()
@@ -346,6 +349,7 @@ public class Controller : MonoBehaviour
 
         if (isGrounded)
         {
+            
             if (isSlipping) // slip down slope
             {
                 // movement left/right while slipping down
@@ -379,7 +383,16 @@ public class Controller : MonoBehaviour
             // - Jump -
             if (!isSliding && !isCeiling && inputKeyDownJump) // jump
             {
-                fauxGravity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+                //fauxGravity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+
+                fauxGravity.y = Mathf.Sqrt(Math.Max(Camera.main.transform.forward.y, 0f)) * jumpHeight * gravity * -0.1f + jumpHeight;
+                Debug.Log(fauxGravity.y.ToString());
+
+                midAirVelocity = Camera.main.transform.forward * 3f;
+
+            }
+            else{
+                midAirVelocity = Vector3.zero;
             }
 
             // --
@@ -412,9 +425,17 @@ public class Controller : MonoBehaviour
         fauxGravity.y += gravity * Time.deltaTime;
 
         // - Move -
+        calc = Vector3.zero;
 
-        calc = move * speed * Time.deltaTime;
+        if (isGrounded){
+            calc = move * speed * Time.deltaTime * 0.5f;
+        } else{
+            midAirVelocity += move * Time.deltaTime * 3f;
+        }
+
         calc += fauxGravity * Time.deltaTime;
+        calc.x += midAirVelocity.x * Time.deltaTime;
+        calc.z += midAirVelocity.z * Time.deltaTime;
 
         controller.Move(calc);
 

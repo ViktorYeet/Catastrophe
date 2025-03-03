@@ -57,7 +57,6 @@ public class PickupObject : MonoBehaviour
         float pickupdistance = 2f;
         if (Physics.Raycast(PlayerCameraTransform.position, PlayerCameraTransform.forward, out RaycastHit raycasthit, pickupdistance))
         {
-            Debug.Log(raycasthit.transform);
             //If object has the ObjectGrabbable script grab it, and turn of collision and gravity
             if (raycasthit.transform.TryGetComponent(out objectGrabbable))
             {

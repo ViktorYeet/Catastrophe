@@ -317,9 +317,9 @@ public class Controller : MonoBehaviour
             playerTx.position = calc;
 
             // offset camera
-            calc = cameraTx.localPosition;
+            /*calc = cameraTx.localPosition;
             calc.y = (controller.height / defaultHeight) + cameraStartY - (defaultHeight * 0.5f);
-            cameraTx.localPosition = calc;
+            cameraTx.localPosition = calc;*/
 
             // calculate offset
             float heightFactor = (defaultHeight - controller.height) * 0.5f;

@@ -19,7 +19,7 @@ public class ButtonHandler : MonoBehaviour
     {
         Debug.Log("Start Game clicked!");
         SceneManager.LoadScene("Assets/Scenes/Main_Scenes/OutDoors/Outdoors.unity"); // Byt ut med din spelscen
-        SceneManager.LoadSceneAsync("Assets/Scenes/Main_Scenes/Apartment_Scenes/Apartment.unity", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync("Assets/Scenes/Main_Scenes/Apartment_Scenes/FilipsMissions/FixadAquireKeyInShower.unity", LoadSceneMode.Additive);
     }
 
     void OpenOptions()

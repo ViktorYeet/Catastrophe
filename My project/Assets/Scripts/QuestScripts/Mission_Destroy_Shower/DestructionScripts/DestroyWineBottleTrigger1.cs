@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class DestroyShowerTrigger : MonoBehaviour
+public class DestroyWineBottleTrigger : MonoBehaviour
 {
     // This is a skeleton that can be used for whatever we would like in the future!
     public GameObject triggeringObject;
@@ -15,7 +15,6 @@ public class DestroyShowerTrigger : MonoBehaviour
         {
             originalObject.SetActive(false);
             destroyedObject.SetActive(true);
-
         }
     }
 }

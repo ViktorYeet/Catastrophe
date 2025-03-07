@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
 
 namespace SojaExiles
@@ -17,7 +18,7 @@ namespace SojaExiles
 			open = false;
 		}
 
-		protected void OnMouseOver()
+		public void OnMouseOver()
 		{
 			{
 				if (Player)

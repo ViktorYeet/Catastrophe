@@ -18,6 +18,10 @@ public class PickupObject : MonoBehaviour
     // updates constantly
     private void Update()
     {
+        if (!objectGrabbable){
+            objectGrabbable = null;
+        }
+
         // dont do anything unless we pressed one of the keys
         if( !(Input.GetKeyDown(pickupKey) || Input.GetKeyDown(throwKey) || Input.GetKeyDown(dropKey))) return;
         

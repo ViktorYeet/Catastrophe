@@ -2719,6 +2719,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: key_gold
       objectReference: {fileID: 0}
+    - target: {fileID: 170560, guid: cc5de5e674870ca479a40105f80555ad, type: 3}
+      propertyPath: m_TagString
+      value: OutdoorKey
+      objectReference: {fileID: 0}
     - target: {fileID: 431008, guid: cc5de5e674870ca479a40105f80555ad, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2
@@ -51073,8 +51077,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.08593076, y: 0.5, z: 1.4261861}
-  m_Center: {x: -0.0429652, y: 0.05660838, z: 0.71147585}
+  m_Size: {x: 0.3, y: 2.8, z: 1.4261861}
+  m_Center: {x: -0.13, y: 0.05660838, z: 0.71147585}
 --- !u!33 &808951037846194689
 MeshFilter:
   m_ObjectHideFlags: 0

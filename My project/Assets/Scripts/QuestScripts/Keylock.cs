@@ -26,10 +26,10 @@ public class Keylock : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
         Debug.Log(String.Format("something moved inside the zone: {0}", other.tag));
-        
+
         if(other.gameObject.CompareTag(requiredObject.tag) && locked ){
             setLocked(false);
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
         }
     }
 }

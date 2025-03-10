@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 3547573417716602711}
   - component: {fileID: 3564746665875910079}
   - component: {fileID: 4649343670771620167}
-  - component: {fileID: 1923595268036368904}
   m_Layer: 0
   m_Name: key_gold
   m_TagString: OutdoorKey
@@ -178,25 +177,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.7, y: 1.2, z: 0.3}
-  m_Center: {x: 0, y: 0.6, z: 0}
---- !u!135 &1923595268036368904
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7754069253983364190}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.6
   m_Center: {x: 0, y: 0.6, z: 0}

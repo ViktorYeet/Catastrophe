@@ -13,7 +13,6 @@ public class DestroyWineGlassTrigger : MonoBehaviour
     {
         if(Other.tag == triggeringObject.tag)
         {
-            print("det funkar");
             originalObject.SetActive(false);
             destroyedObject.SetActive(true);
         }

@@ -91628,7 +91628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 317391b98fce48a4bbe073a450199d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: BasicApartment
+  nextSceneName: DefaultApartment
   triggerObject: {fileID: 1057589547}
 --- !u!65 &1131953955
 BoxCollider:

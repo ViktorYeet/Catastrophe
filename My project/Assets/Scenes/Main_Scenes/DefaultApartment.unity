@@ -151306,6 +151306,7 @@ MonoBehaviour:
   Toaster: {fileID: 0}
   Shower: {fileID: 0}
   BathroomLamp: {fileID: 0}
+  nextSceneName: UnlockFridgeMission
 --- !u!1 &1814627050 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2889475787371002274, guid: 7b46309dabb99ee4fa3344ad09ed7d4d, type: 3}

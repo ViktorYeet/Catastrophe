@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MissionText : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class MissionText : MonoBehaviour
     public GameObject Toaster;
     public GameObject Shower;
     public GameObject BathroomLamp;
+    public string nextSceneName;
 
     // Start is called before the first frame update
     void Start()
@@ -74,10 +76,16 @@ public class MissionText : MonoBehaviour
                         if (BathroomLamp == null)
                         {
                             Text.text = "You have successfully damaged Dave's life.";
+                            nextLevel();
                         }
                     }
                 }
             }
         }
+    }
+    void nextLevel()
+    {
+        SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
+
     }
 }

@@ -5,12 +5,15 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main_Scenes/Apartment_Scenes/Apartment.unity
     guid: d45d579771e42db4ea9df449f933844d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main_Scenes/OutDoors/Outdoors.unity
     guid: aec5fc0037ad612429b93b421405c436
+  - enabled: 1
+    path: Assets/Scenes/Main_Scenes/Apartment_Scenes/Menu.unity
+    guid: 2da0111f3bc51504ea96baaa24c10e22
   - enabled: 1
     path: Assets/Scenes/Main_Scenes/UnlockFridgeMission.unity
     guid: be71419459bc71e408663b3991e563ed

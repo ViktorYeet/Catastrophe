@@ -12,9 +12,11 @@ public class AudioManager : MonoBehaviour
     public AudioClip background;
     public AudioClip destruction;
     public AudioClip jump;
-    public AudioClip throwobject;
+    public AudioClip throwObject;
+    public AudioClip objectCollision;
     private void Start()
     {
+
         musicSource.clip = background;
         musicSource.Play();
     }

@@ -18,17 +18,14 @@ public class ButtonHandler : MonoBehaviour
         optionsButton.onClick.AddListener(OpenOptions);
         quitButton.onClick.AddListener(QuitGame);
         backButton.onClick.AddListener(BackButton);
-        OptionsPanel = GameObject.Find("OptionsPanel");
         OptionsPanel.SetActive(false);
-        StartPanel = GameObject.Find("StartMenu");
         StartPanel.SetActive(true);
     }
 
     void StartGame()
     {
         Debug.Log("Start Game clicked!");
-        SceneManager.LoadScene("Assets/Scenes/Main_Scenes/OutDoors/Outdoors.unity"); // Byt ut med din spelscen
-        SceneManager.LoadSceneAsync("Assets/Scenes/Main_Scenes/Apartment_Scenes/Apartment.unity", LoadSceneMode.Additive);
+        SceneManager.LoadScene(""); // Byt ut med din spelscen
     }
 
     void OpenOptions()

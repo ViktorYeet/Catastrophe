@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+public class audioManager : MonoBehaviour
 {
     [Header("-------- Audio Soure -------------")]
     [SerializeField] AudioSource musicSource;
@@ -19,5 +19,10 @@ public class AudioManager : MonoBehaviour
 
         musicSource.clip = background;
         musicSource.Play();
+    }
+
+    public void PlaySFX(AudioClip clip)
+    {
+        SFXSource.PlayOneShot(clip);
     }
 }

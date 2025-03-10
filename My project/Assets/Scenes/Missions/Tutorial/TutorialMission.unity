@@ -20978,8 +20978,8 @@ GameObject:
   - component: {fileID: 306720761}
   - component: {fileID: 306720760}
   m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
+  m_Name: audioManager
+  m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21001,7 +21001,8 @@ MonoBehaviour:
   background: {fileID: 8300000, guid: 93a4516ebe6f44ecfb69ddb269b25528, type: 3}
   destruction: {fileID: 0}
   jump: {fileID: 0}
-  throwobject: {fileID: 0}
+  throwObject: {fileID: 0}
+  objectCollision: {fileID: 0}
 --- !u!4 &306720761
 Transform:
   m_ObjectHideFlags: 0
@@ -70461,7 +70462,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 93a4516ebe6f44ecfb69ddb269b25528, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

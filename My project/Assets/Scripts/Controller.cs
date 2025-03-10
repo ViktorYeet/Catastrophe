@@ -376,7 +376,7 @@ public class Controller : MonoBehaviour
             }
 
             // - Jump -
-            if (!isSliding && !isCeiling && inputKeyDownJump) // jump
+            if (inputKeyDownJump) // jump
             {
                 //fauxGravity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
 

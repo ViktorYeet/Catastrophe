@@ -17,7 +17,7 @@ namespace SojaExiles
 			open = false;
 		}
 
-		void OnMouseOver()
+		public void OnMouseOver()
 		{
 			{
 				if (Player)

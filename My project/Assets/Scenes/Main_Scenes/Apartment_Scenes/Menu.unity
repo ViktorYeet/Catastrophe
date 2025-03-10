@@ -1290,8 +1290,6 @@ MonoBehaviour:
   backButton: {fileID: 1020980516}
   OptionsPanel: {fileID: 1953619024}
   StartPanel: {fileID: 90776553}
-  DropDown: {fileID: 830426692}
-  MainCamera: {fileID: 1149997769}
 --- !u!1 &633945162
 GameObject:
   m_ObjectHideFlags: 0

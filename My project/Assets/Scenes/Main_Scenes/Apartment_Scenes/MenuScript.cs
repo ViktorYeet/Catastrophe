@@ -9,8 +9,8 @@ public class ButtonHandler : MonoBehaviour
     public Button optionsButton;
     public Button quitButton;
     public Button backButton;
-    public static GameObject OptionsPanel;
-    public static GameObject StartPanel;
+    public GameObject OptionsPanel;
+    public GameObject StartPanel;
 
     void Start()
     {
@@ -36,7 +36,7 @@ public class ButtonHandler : MonoBehaviour
         Debug.Log("Options clicked!");
         OptionsPanel.SetActive(true);
         StartPanel.SetActive(false);
-    // L�gg till kod f�r att �ppna alternativmenyn
+        Debug.Log("test");
 }
 
     void QuitGame()
@@ -50,6 +50,5 @@ public class ButtonHandler : MonoBehaviour
         Debug.Log("Back clicked!");
         OptionsPanel.SetActive(false);
         StartPanel.SetActive(true);
-        // L�gg till kod f�r att �ppna alternativmenyn
     }
 }

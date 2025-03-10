@@ -25,7 +25,7 @@ public class ButtonHandler : MonoBehaviour
     void StartGame()
     {
         Debug.Log("Start Game clicked!");
-        SceneManager.LoadScene(""); // Byt ut med din spelscen
+        SceneManager.LoadScene("Assets/Scenes/Missions/Tutorial/TutorialMission.unity"); // Byt ut med din spelscen
     }
 
     void OpenOptions()

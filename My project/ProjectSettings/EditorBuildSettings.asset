@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main_Scenes/DefaultApartment.unity
     guid: de50327daead3a94080c0c3118ca0960
+  - enabled: 1
+    path: Assets/Scenes/Missions/Tutorial/TutorialMission.unity
+    guid: 34f7faa6380125545a90574d92855378
   m_configObjects: {}

@@ -25,9 +25,9 @@ public class MissionTextTutoral: MonoBehaviour
     // Coroutine to change the text after a delay
     IEnumerator UpdateMissionText()
     {
-        Text.text = "Even as a child Dave tried to lock me in";
+        Text.text = "POG";
         yield return new WaitForSeconds(5); // Wait for 5 seconds
-        Text.text = "Move around with ASDW";
+        Text.text = "Try to throw something at the big glass vase.";
     }
 
     void UpdateWineBottlesText()
